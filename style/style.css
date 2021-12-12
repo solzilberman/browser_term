@@ -1,0 +1,101 @@
+body {
+    min-height: 100vh;
+    background-color: rgb(97, 100, 163);
+  }
+  .main-container {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 45vh;
+  }
+  .wc-box {
+    margin: auto;
+    width: 50vw;
+    height: 9vh;
+    border: rgb(0, 0, 0);
+    border-style: groove;
+    /* round only top corners */
+    background-color: dimgrey;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+  }
+
+  .wc-box div {
+    position: relative;
+    float: right;
+    width: 30px;
+    height: 30px;
+  }
+
+  .wc-box div:before,
+  .wc-box div:after {
+    top: 30%;
+    right: 30%;
+    bottom: 30%;
+    left: 30%;
+    content: " ";
+    position: absolute;
+    border-color: #CCCCCC;
+    border-style: solid;
+    border-width: 0 0 2px 0;
+  }
+
+  .wc-box .minimize:before {
+    border-bottom-width: 2px;
+  }
+
+  .wc-box .maximize:before {
+    border-width: 1px 1px 2px 1px;
+  }
+
+  .wc-box .close:before,
+  .wc-box .close:after {
+    bottom: 50%;
+    top: 50%;
+  }
+
+  .wc-box .close:before {
+    transform: rotate(45deg);
+  }
+
+  .wc-box .close:after {
+    transform: rotate(-45deg);
+  }
+
+  .wc-box div:hover {
+    background-color: #CCCCCC;
+  }
+
+  .wc-box .close:hover {
+    background-color: #E04343;
+  }
+
+  .wc-box div:hover:after,
+  .wc-box div:hover:before {
+    border-color: #333333;
+  }
+
+  .wc-box .close:hover:after,
+  .wc-box .close:hover:before {
+    border-color: #FFFFFF;
+  }
+  #vanilla-terminal {
+    /*hide scroll bar*/
+    overflow: hidden;
+    position: fixed;
+    height: 50vh;
+    width: 50vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    /* box shadow bottom only*/
+    box-shadow: 0px 10px 8px 0px #0000005c;
+
+  }
